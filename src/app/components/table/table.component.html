@@ -1,0 +1,32 @@
+<nz-table 
+    #basicTable 
+    [nzData]="listOfData"
+    [nzPageSize]="16"
+    [nzBordered]="true">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Mon</th>
+        <th>Tus</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+
+        <td>{{data.time}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+    </tbody>
+  </nz-table>
