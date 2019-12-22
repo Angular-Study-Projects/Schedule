@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './pages/home/home.module';
 import { IconsProviderModule } from './icons-provider.module';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +18,6 @@ registerLocaleData(en);
     AppComponent
   ],
   imports: [
-    HomeModule,
     BrowserModule,
     AppRoutingModule,
     IconsProviderModule,

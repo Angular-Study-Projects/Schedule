@@ -1,4 +1,4 @@
-<nz-layout class="app-layout">
+<!-- <nz-layout class="app-layout">
   <nz-sider class="menu-sidebar"
             nzCollapsible
             nzWidth="256px"
@@ -19,13 +19,6 @@
           </li>
         </ul>
       </li>
-      <!-- <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
-          </li>
-        </ul>
-      </li> -->
     </ul>
   </nz-sider>
   <nz-layout>
@@ -45,4 +38,15 @@
       </div>
     </nz-content>
   </nz-layout>
+</nz-layout> -->
+
+
+<nz-layout>
+  <nz-header>header</nz-header>
+  <nz-layout>
+    <nz-content style="margin: 0">
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+  <nz-footer>footer</nz-footer>
 </nz-layout>
