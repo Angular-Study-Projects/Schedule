@@ -10,10 +10,13 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzTagModule } from 'ng-zorro-antd/tag';
 
 import { WelcomeComponent } from './welcome.component';
 import { ExamplesComponent } from 'src/app/components/examples/examples.component';
 import { InstagramComponent } from 'src/app/components/examples/instagram/instagram.component';
+import { PricesComponent } from 'src/app/components/prices/prices.component';
 
 
 @NgModule({
@@ -24,13 +27,16 @@ import { InstagramComponent } from 'src/app/components/examples/instagram/instag
     NzCardModule,
     NzGridModule,
     NzTabsModule,
+    NzTagModule,
+    NzBadgeModule,
     WelcomeRoutingModule,
     NzButtonModule
   ],
   declarations: [
     WelcomeComponent,
     ExamplesComponent,
-    InstagramComponent
+    InstagramComponent,
+    PricesComponent
   ],
   exports: [WelcomeComponent]
 })
