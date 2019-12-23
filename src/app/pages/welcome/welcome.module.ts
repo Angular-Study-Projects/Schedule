@@ -17,6 +17,7 @@ import { WelcomeComponent } from './welcome.component';
 import { ExamplesComponent } from 'src/app/components/examples/examples.component';
 import { InstagramComponent } from 'src/app/components/examples/instagram/instagram.component';
 import { PricesComponent } from 'src/app/components/prices/prices.component';
+import { FeaturesComponent } from 'src/app/components/features/features.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PricesComponent } from 'src/app/components/prices/prices.component';
     WelcomeComponent,
     ExamplesComponent,
     InstagramComponent,
-    PricesComponent
+    PricesComponent,
+    FeaturesComponent
   ],
   exports: [WelcomeComponent]
 })
