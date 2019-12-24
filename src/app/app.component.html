@@ -40,35 +40,42 @@
   </nz-layout>
 </nz-layout> -->
 
+<nz-drawer
+    [nzClosable]="false"
+    [nzVisible]="visible"
+    nzPlacement="right"
+    [nzTitle]="brand"
+    (nzOnClose)="close()"
+    [nzBodyStyle]="{padding: 0}"
+  >
+    <nav class="navigation-drawer">
+      <ul>
+        <li (click)="close()">HOME</li>
+        <li (click)="close()">ABOUT</li>
+        <li (click)="close()">FEATURES</li>
+        <li (click)="close()">CONTACT</li>
+      </ul>
+    </nav>
+  </nz-drawer>
+
+  <ng-template #brand>
+    <div style="text-align: center; ">
+      <img src="../assets/pngs/brand.png" width="70%" alt="brand" style="background-color: white; ">
+    </div>
+  </ng-template>
+
 
 <nz-layout>
-  <nz-header style="position: fixed; background-color: white; display: flex; align-items: center; justify-content: space-between;">
-    <div style="display: inline-flex; justify-content: center;">
+  <nz-header style="position: fixed; background-color: white; display: flex; align-items: center; justify-content: space-between; padding: 0 15px">
+    <div style="display: inline-flex;">
       <img src="../assets/pngs/brand.png" width="70%" alt="brand" style="background-color: white; ">
     </div>
 
-
-    <nav class="navbar navbar-expand-lg">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div (click)="open()" class="navigation">
+      <i nz-icon nzType="menu" nzTheme="outline"></i>
+    </div>
     
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
+    
 
 
   </nz-header>
@@ -77,5 +84,7 @@
       <router-outlet></router-outlet>
     </nz-content>
   </nz-layout>
-  <nz-footer>footer</nz-footer>
+  <nz-footer style="padding: 0">
+    <app-footer></app-footer>
+  </nz-footer>
 </nz-layout>

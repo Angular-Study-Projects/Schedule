@@ -12,12 +12,16 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 
 import { WelcomeComponent } from './welcome.component';
 import { ExamplesComponent } from 'src/app/components/examples/examples.component';
 import { InstagramComponent } from 'src/app/components/examples/instagram/instagram.component';
 import { PricesComponent } from 'src/app/components/prices/prices.component';
 import { FeaturesComponent } from 'src/app/components/features/features.component';
+import { ContactModule } from 'src/app/components/contact/contact.module';
+
+
 
 
 @NgModule({
@@ -28,10 +32,12 @@ import { FeaturesComponent } from 'src/app/components/features/features.componen
     NzCardModule,
     NzGridModule,
     NzTabsModule,
+    NzDrawerModule,
     NzTagModule,
     NzBadgeModule,
     WelcomeRoutingModule,
-    NzButtonModule
+    NzButtonModule,
+    ContactModule
   ],
   declarations: [
     WelcomeComponent,
