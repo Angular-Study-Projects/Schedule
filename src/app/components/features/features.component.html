@@ -1,34 +1,84 @@
-<div>
-    <h2>
-        Features
-    </h2>
-</div>
 
-<div nz-row>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        newest technologies
-    </div>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        responsiviness
-    </div>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        user friendly
+<div class="container">
+    <div nz-row>
+        <div nz-col nzXs="24" style="text-align: center; margin-bottom: 5%;">
+            <h2>
+                Features
+            </h2>
+        </div>        
     </div>
 
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        SEO
-    </div>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        Copyrighting
-    </div>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        Agile methodology
-    </div>
-
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        email template
-    </div>
-    <div class="features" nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="6" nzXl="4">
-        more
+    <div nz-row nz-row nzType="flex" nzAlign="middle" nzJustify="space-around">
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            
+            <nz-card nzHoverable [nzCover]="cover01">
+                <nz-card-meta nzTitle="Newest Technologies" nzDescription="We use the newest techs in the market to improve the development"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover01>
+                <i nz-icon nzType="html5" nzTheme="twotone"></i>
+            </ng-template>
+        </div>
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover02">
+                <nz-card-meta nzTitle="Responsiviness" nzDescription="Website adaptable to all kind of devices, from mobile to desktop"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover02>
+                <div style="display: flex; justify-content: center;">
+                    <i nz-icon nzType="laptop" nzTheme="outline"></i>
+                    <i nz-icon nzType="mobile" nzTheme="outline"></i>
+                </div>
+            </ng-template>
+        </div>
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover07">
+                <nz-card-meta nzTitle="Email Template" nzDescription="With the website we make a email response to use on newsletter"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover07>
+                <i nz-icon nzType="mail" nzTheme="twotone"></i>
+            </ng-template>
+        </div>
+    
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover04">
+                <nz-card-meta nzTitle="SEO" nzDescription="Search Optimize Engine (SEO) to increase the rank on search world wide"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover04>
+                <i nz-icon nzType="line-chart" nzTheme="outline"></i>
+            </ng-template>
+        </div>
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover05">
+                <nz-card-meta nzTitle="Copyrighting" nzDescription="Unique content to better describe your product written for or by the client "></nz-card-meta>
+            </nz-card>
+            <ng-template #cover05>
+                <i nz-icon nzType="file-done" nzTheme="outline"></i>
+            </ng-template>
+        </div>
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover06">
+                <nz-card-meta nzTitle="Agile Methodology" nzDescription="We work with Scrum methodology to delivery the product as soon as possible"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover06>
+                <i nz-icon nzType="thunderbolt" nzTheme="twotone"></i>
+            </ng-template>
+        </div>
+    
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover03">
+                <nz-card-meta nzTitle="User Friendly" nzDescription="Design made to be easiar to use giving a better experience"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover03>
+                <i nz-icon nzType="usergroup-add" nzTheme="outline"></i>
+            </ng-template>
+        </div>
+        
+        <div class="features" nz-col nzXs="24" nzSm="24" nzMd="7" nzLg="5" nzXl="5">
+            <nz-card nzHoverable [nzCover]="cover08">
+                <nz-card-meta nzTitle="More" nzDescription="And much more features to better develop your web identity"></nz-card-meta>
+            </nz-card>
+            <ng-template #cover08>
+                <i nz-icon nzType="ellipsis" nzTheme="outline" style="color: #1890ff;"></i>
+            </ng-template>
+        </div>
     </div>
 </div>
