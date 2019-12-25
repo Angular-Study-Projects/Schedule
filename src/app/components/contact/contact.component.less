@@ -8,3 +8,23 @@
         margin-right: 5px;
     }
 }
+
+.contact-row {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+
+    .contact-brand {
+        text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+        .contact-brand {
+            text-align: center;
+            img {
+                width: 30%;   
+            }
+        }
+        flex-direction: column;
+    }
+}
