@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FooterComponent } from './components/footer/footer.component';
+import { WelcomeModule } from './pages/welcome/welcome.module';
 
 
 
@@ -25,6 +26,7 @@ registerLocaleData(en);
     FooterComponent
   ],
   imports: [
+    WelcomeModule,
     NzDrawerModule,
     BrowserModule,
     AppRoutingModule,

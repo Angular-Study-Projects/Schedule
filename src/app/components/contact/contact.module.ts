@@ -6,7 +6,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule, NzGridModule, NzIconModule } from 'ng-zorro-antd';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -16,7 +16,8 @@ import { NzButtonModule, NzGridModule, NzIconModule } from 'ng-zorro-antd';
         NzInputModule,
         NzButtonModule,
         NzGridModule,
-        NzIconModule
+        NzIconModule,
+        HttpClientModule
     ],
     declarations: [
         ContactComponent
