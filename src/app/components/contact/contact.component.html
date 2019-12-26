@@ -1,8 +1,10 @@
 <div class="container">
 
-    <div nz-row style="display: flex; align-items: center;">
+    <div nz-row class="contact-row">
             <div nz-col nzXs="23" nzSm="23" nzMd="5" nzLg="5" nzXl="5">
-                <img src="../../../assets/pngs/brand-initial.png" alt="REALIT brand" width="100%">
+                <div class="contact-brand">
+                  <img src="../../../assets/pngs/brand-initial.png" alt="REALIT brand" width="70%">
+                </div>
                 
                 <div class="social">
 
@@ -14,23 +16,29 @@
     
                 </div>
             </div>
-            <div nz-col nzXs="23" nzSm="23" nzMd="16" nzLg="16" nzXl="16">
-                <h2 style="text-align: center;">
+            <div nz-col nzXs="23" nzSm="23" nzMd="12" nzLg="12" nzXl="12" style="text-align: center;">
+                <h2 >
                     Contact Us
                 </h2>
-                <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+
+                <!-- (ngSubmit)="submitForm(validateForm.value)" -->
+                <form  nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
 
                     <nz-form-item>
-                        <nz-form-label [nzSpan]="7" nzRequired>Name</nz-form-label>
-                        <nz-form-control [nzSpan]="12">
-                          <input nz-input formControlName="name" placeholder="name" type="name" />
+                        <nz-form-control >
+                          <input nz-input formControlName="name" placeholder="name" type="text" name="name"/>
+                        </nz-form-control>
+                      </nz-form-item>
+
+                      <nz-form-item>
+                        <nz-form-control >
+                          <input nz-input formControlName="about" placeholder="about" type="text" name="about"/>
                         </nz-form-control>
                       </nz-form-item>
             
                     <nz-form-item>
-                      <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
-                      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
-                        <input nz-input formControlName="email" placeholder="email" type="email" />
+                      <nz-form-control  nzHasFeedback [nzErrorTip]="emailErrorTpl">
+                        <input nz-input formControlName="email" placeholder="email" type="email" name="_replyto"/>
                         <ng-template #emailErrorTpl let-control>
                           <ng-container *ngIf="control.hasError('email')">
                             The input is not valid E-mail!
@@ -43,18 +51,28 @@
                     </nz-form-item>
             
                     <nz-form-item>
-                      <nz-form-label [nzSpan]="7" nzRequired>Comment</nz-form-label>
-                      <nz-form-control [nzSpan]="12" nzErrorTip="Please write something here!">
-                        <textarea formControlName="comment" nz-input rows="2" placeholder="write any thing"></textarea>
+                      <nz-form-control  nzErrorTip="Please write something here!">
+                        <textarea formControlName="comment" nz-input rows="2" placeholder="write any thing" type="text" name="comment"></textarea>
                       </nz-form-control>
                     </nz-form-item>
             
                     <nz-form-item>
-                      <nz-form-control [nzOffset]="7" [nzSpan]="12">
-                        <button nz-button nzType="primary" nzBlock [disabled]="!validateForm.valid">Submit</button>
+                      <nz-form-control >
+                        <button nz-button type="submit" nzType="primary" nzBlock [disabled]="!validateForm.valid">Submit</button>
                       </nz-form-control>
                     </nz-form-item>
-                  </form>
+                </form>
+
+
+
+                <!-- <form action=" https://formsubmit.co/your@email.com " method="POST">
+
+                    <input type="text" name="name">
+                    <input type="email" name="email">
+                    <input type="text" name="tel">
+                    <button type="submit">Send</button>
+                
+                </form> -->
             </div>
     </div>
     

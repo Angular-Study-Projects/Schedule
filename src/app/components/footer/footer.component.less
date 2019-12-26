@@ -5,7 +5,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     padding: 3% 10%;
 
@@ -14,13 +14,22 @@
         flex-direction: column;
         width: 23%;
     
+        h4 {
+            border-left: 3px solid #e8e8e8e8;
+            padding-left: 7px;
+        }
         h4, p {
             color: #e8e8e8;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
         }
         
     }
 
     @media screen and (max-width: 767px) {
         flex-direction: column;
+        padding: 15% 3%;
     }
 }
